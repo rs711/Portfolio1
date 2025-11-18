@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritesh Shah Portfolio</title>
+<link rel="stylesheet" href="portfolio.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+</head>
+<body>
+
+<button class="menu-btn" id="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+</button>
+
+<aside class="sidebar" id="sidebar">
+    <div class="profile">
+        <img src="ritesh2.jpg" alt="Ritesh Shah" class="profile-pic">
+    </div>
+
+    <div class="social-links-sidebar">
+        <a href="https://www.facebook.com/ritesh.shah.3781" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_theriteshshah_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ritesh-shah-54115b325/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="#hero" onclick="closeMenu()"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="#about" onclick="closeMenu()"><i class="fas fa-user"></i> <span>About</span></a></li>
+            <li><a href="#projects" onclick="closeMenu()"><i class="fas fa-briefcase"></i> <span>Projects</span></a></li>
+            <li><a href="#skills" onclick="closeMenu()"><i class="fas fa-lightbulb"></i> <span>Skills</span></a></li>
+            <li><a href="#contact" onclick="closeMenu()"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+    </nav>
+</aside>
+
+<div class="main-content">
+
+    <section class="hero" id="hero">
+        <img src="ritesh.jpg" class="hero-img" alt="Ritesh">
+        <h4 class="hello">Hello I'm</h4>
+        <h1 class="hero-name">Ritesh Shah</h1>
+        <p class="hero-text">
+            A **Civil Engineer** with 1 year experience in construction, project
+            management, and structural planning. I specialize in site supervision,
+            design analysis, and project execution.
+        </p>
+        <a href="#about" class="more-btn">More About Me →</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p class="bio-summary">
+            I am a dedicated civil engineer with hands-on experience in construction
+            projects, site management, and structural planning. My work focuses on
+            efficient project delivery and ensuring structural integrity.
+        </p>
+
+        <div class="info-block">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="timeline-item">
+                <h4>Bachelor in Civil Engineering</h4>
+                <p>Kathford Internatioal College of Engineering and Management, Kathmandu | 2020 - 2025</p>
+            </div>
+            <div class="timeline-item">
+                <h4>+2 (Science)</h4>
+                <p>Little Angels' College, Lalitpur | 2018 - 2020</p>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <h3><i class="fas fa-building"></i> Training/Certificates</h3>
+            <div class="timeline-item">
+                <h4>Nepal Institute of Engineering Pvt Ltd</h4>
+                <p>Municipal map maling using AutoCad, Sketchup and V-Ray</p>
+                <ul>
+                    <li>I have completed the 9th Batch of Physical Training on Municipal Map Making using AutoCad, Sketchup, V-ray (from 17 may, 2024 to 25 june, 2024)</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h4>Vintuna Engineering Consult Pvt Ltd</h4>
+                <p>Structural Analysis and Design Training using CSi ETABS</p>
+                <ul>
+                    <li>I have completed the structural Analisis and Design Training using CSi ETABS(frommay 27, 2024 to june 27, 2024) at Kathford Internatioal College of Enginnering and Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Earthquake Resistant Design of Multistorey Instutional Building using NBC:105:2020</h3>
+                <p>Designed a multistorey building for seismic resistance following IS 875:1987 and NBC:105:2020. Used ETABS v20 for structural modeling and analysis, and AutoCAD 2023 for drawings and detailing of structural members.</p>
+            </div>
+            <div class="project-card">
+                <h3>Design Of Earthquake Resistance Commercial Building</h3>
+                <p>Focused on designing structures resistant to seismic forces using reinforced concrete and steel to enhance stability and durability, ensuring compliance with seismic codes for safe and resilient buildings.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Core Skills</h2>
+        <ul>
+            <li>AutoCAD</li>
+            <li>ETABS (for structural Design)</li>
+            <li>Sketchup & V-ray</li>
+            <li>MS Excell</li>
+            <li>MS Word</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form" id="contact-form" onsubmit="sendMail(event)">
+                <input type="text" placeholder="Your Name" name="from_name" required>
+                <input type="email" placeholder="Your Email" name="from_email" required>
+                <textarea placeholder="Your Message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <div class="contact-details">
+                <h3>My Contact Details</h3>
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:ritesh12044@gmail.com">ritesh12044@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+9779814005103">+977-9814005103</a></p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Gaurigunj<br>Jhapa, Nepal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    // Public Key: T3-_2Y80eW4EhFfAK
+    (function() {
+        emailjs.init("T3-_2Y80eW4EhFfAK"); 
+    })();
+
+    function sendMail(event) {
+        event.preventDefault(); // Stop the default form submission
+
+        const form = document.getElementById('contact-form');
+        
+        // Service ID: service_43528kz, Template ID: template_yw6i7s4
+        emailjs.sendForm('service_43528kz', 'template_yw6i7s4', form)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent successfully!');
+                form.reset(); // Clear the form fields on success
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Message failed to send. Please try again.');
+            });
+    }
+</script>
+
+<script>
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menu-toggle");
+
+function toggleMenu() {
+    sidebar.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+}
+
+function closeMenu() {
+    sidebar.classList.remove("active");
+    menuBtn.classList.remove("active");
+}
+</script>
+
+</body>
+</html>
